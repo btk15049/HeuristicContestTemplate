@@ -15,6 +15,7 @@ RUN apt update -y && apt upgrade -y \
     libssl-dev \
     python3-pip \
     clang-format \
+    rustc \
     && apt-get clean
 
 ENV CC gcc-9
