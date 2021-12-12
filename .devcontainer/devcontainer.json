@@ -22,7 +22,9 @@
     ],
     "C_Cpp.default.defines": ["BTK", "VSCODE"],
     "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.compilerArgs": ["-Wall", "-Wextra"],
     "python.pythonPath": "/usr/bin/python3",
+    "python.formatting.provider": "black",
     // editor 周りの設定
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
