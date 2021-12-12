@@ -1,4 +1,12 @@
 ARG VARIANT="focal"
+
+FROM rust AS builder
+
+WORKDIR /app
+
+# AHC の Rust tool 用
+# COPY official-tools .
+# RUN cargo build --release
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 
 WORKDIR /opt
@@ -49,3 +57,7 @@ RUN git clone https://github.com/atcoder/ac-library.git \
     && cp -r ac-library/atcoder /usr/include/atcoder
 
 RUN pip3 install online-judge-tools
+
+# COPY --from=builder /app/target/release/gen /opt/
+# COPY --from=builder /app/target/release/vis /opt/
+# COPY --from=builder /app/target/release/tester /opt/
