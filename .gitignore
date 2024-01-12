@@ -1,6 +1,5 @@
-*.in
-*.out
-
+data/
+*.db
 # for atcoder
 *.svg
 official-tools/
@@ -281,7 +280,6 @@ Cargo.lock
 
 ### VisualStudioCode ###
 .vscode/*
-!.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
